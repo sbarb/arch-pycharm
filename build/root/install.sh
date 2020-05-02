@@ -22,7 +22,7 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /usr/local/bin/
 source upd.sh
 
 # define pacman packages
-pacman_packages="git python2 python2-pip python2-packaging python3 python-pip python-packaging tk pycharm-community-edition gcc"
+pacman_packages="git python2 python2-pip python2-packaging python3 python-pip python3-pip python-packaging tk pycharm-professional gcc"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
