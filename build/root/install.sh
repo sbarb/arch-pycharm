@@ -30,11 +30,15 @@ if [[ ! -z "${pacman_packages}" ]]; then
 	pacman -S --needed $pacman_packages --noconfirm
 fi
 
+wget https://download.jetbrains.com/python/pycharm-professional-2020.1.tar.gz
+tar -xzf pycharm-professional-2020.1.tar.gz
+mv pycharm-2020.1 /usr/share/pycharm
+
 # aur packages
 ####
 
 # define aur packages
-aur_packages="pycharm-professional"
+aur_packages=""
 
 # call aur install script (arch user repo)
 source aur.sh
