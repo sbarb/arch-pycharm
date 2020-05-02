@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # exit script if return code != 0
 set -e
 
