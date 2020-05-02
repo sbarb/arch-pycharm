@@ -23,7 +23,7 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /usr/local/bin/
 source upd.sh
 
 # define pacman packages
-pacman_packages="git python2 python2-pip python2-packaging python3 python-pip python3-pip python-packaging tk pycharm-professional gcc"
+pacman_packages="git python2 python2-pip python2-packaging python3 python-pip python3-pip python-packaging tk gcc"
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
@@ -34,7 +34,7 @@ fi
 ####
 
 # define aur packages
-aur_packages=""
+aur_packages="pycharm-professional"
 
 # call aur install script (arch user repo)
 source aur.sh
