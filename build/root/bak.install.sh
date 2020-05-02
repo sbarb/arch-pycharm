@@ -23,18 +23,17 @@ mv /tmp/scripts-master/shell/arch/docker/*.sh /usr/local/bin/
 source upd.sh
 
 # define pacman packages
-pacman_packages="wget git python2 python2-pip python2-packaging python3 python-pip python-packaging tk gcc"
+pacman_packages="git python2 python2-pip python2-packaging python3 python-pip python-packaging tk gcc"
 
+pacman -S --needed wget --noconfirm
+wget https://download.jetbrains.com/python/pycharm-professional-2020.1.tar.gz
+tar -xzf pycharm-professional-2020.1.tar.gz
+mv pycharm-2020.1 /usr/share/pycharm
 
 # install compiled packages using pacman
 if [[ ! -z "${pacman_packages}" ]]; then
 	pacman -S --needed $pacman_packages --noconfirm
 fi
-
-wget https://download.jetbrains.com/python/pycharm-professional-2020.1.tar.gz
-tar -xzf pycharm-professional-2020.1.tar.gz
-mv pycharm-2020.1 /usr/share/pycharm
-
 # aur packages
 ####
 
